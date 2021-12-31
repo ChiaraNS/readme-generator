@@ -27,6 +27,11 @@ const questions = () => {
             message: 'Write a descritption of your project',
         },
         {
+            type: 'input',
+            name: 'installation',
+            message: 'Enter the installation process',
+        },
+        {
             type: 'checkbox',
             name: 'technology',
             message: 'What languages were used in the creating of this porject?',
@@ -38,11 +43,6 @@ const questions = () => {
                 'Python',
                 'Other',
             ]
-        },
-        {
-            type: 'input',
-            name: 'installation',
-            message: 'Enter the installation process',
         },
         {
             type: 'input',
