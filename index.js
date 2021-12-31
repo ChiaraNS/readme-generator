@@ -77,21 +77,18 @@ const questions = () => {
 };
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-    const fileName = "README.md";
-    const answers = await questions();
-    const data = generateMarkdown(answers);
 
-    fs.createFile(fileName, data, err => {
-        if(err) throw err;
-        console.log('Readme created successfully!');
-    })
-}
 
 // TODO: Create a function to initialize app
 function init() {
-   questions()
-    .then(writeToFile);
+    questions()
+
+    .then(answers => {
+        fs.createFile(fileName, generateMarkdown(answers), err => {
+        if(err) throw err;
+        console.log('Readme created successfully!');
+        })
+    })
 }
 
 // Function call to initialize app
