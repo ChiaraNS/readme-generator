@@ -84,7 +84,7 @@ function init() {
     questions()
 
     .then(answers => {
-        fs.createFile(fileName, generateMarkdown(answers), err => {
+        fs.writeFile("README.md", generateMarkdown(answers), err => {
         if(err) throw err;
         console.log('Readme created successfully!');
         })
