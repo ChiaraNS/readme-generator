@@ -90,8 +90,8 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
-    writeToFile()
-    .then(createFile);
+   questions()
+    .then(writeToFile);
 }
 
 // Function call to initialize app
